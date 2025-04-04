@@ -1,0 +1,19 @@
+@use 'helpers' as *;
+
+:root {
+    --color-light: #FFFF;
+    --color-grey: #adadb4;
+    --color-green: #5E7600;
+    --color-hover: #aaaaaf;
+    --color-dark: #000000 ;
+    --color-bg-block: #757864;
+    --color-block: #F6FFD2;
+    --font-family-logo: '';
+    --font-family-base: 'Actay';
+    --font-family-second: 'ActayWide';
+    --border: #{rem(1)} solid var(--color-light);
+
+    @include laptop {
+        --container-width: #{rem(1280)};
+    }
+}

@@ -1,0 +1,147 @@
+@use '../helpers' as *;
+
+.block {
+  position: absolute;
+  background: var(--color-bg-block);
+  border-radius: rem(30) rem(0) rem(30) rem(0);
+  border: rem(4) solid var(--color-light);
+  padding: rem(10) rem(15) 0 rem(76);
+  width: rem(300);
+  box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.35);
+
+  @include laptop {
+    width: rem(290);
+    padding: rem(10) rem(15) 0 rem(40);
+    position: relative;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.3);
+    display: none; 
+  }
+
+  &.active {
+    display: flex;
+  }
+
+  &::before {
+    position: absolute;
+    content: url(/Icons/Vector.svg);
+    top: rem(-25);
+    right: rem(-30);
+  }
+
+  &-number {
+    position: absolute;
+    top: rem(15);
+    left: rem(15);
+    background: var(--color-green);
+    color: var(--color-light);
+    border-radius: 50%;
+    border: rem(1) solid var(--color-light);
+    width: rem(50);
+    height: rem(50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: rem(30);
+    user-select: none;
+
+    @include laptop {
+      left: rem(100);
+      width: rem(74);
+      height: rem(74);
+    }
+  }
+
+  &-text {
+    margin: 0;
+    padding: rem(10) 0;
+    color: var(--color-block);
+    font-size: rem(14);
+
+    @include laptop {
+      padding: rem(100) rem(18) rem(44);
+    }
+  }
+}
+
+#block-1 { top: 2%; left: 5%; }
+#block-2 { top: 30%; left: 10%; }
+#block-3 { top: 50%; left: 37%; }
+#block-4 { top: 13%; left: 36%; }
+#block-5 { top: 8%; left: 70%; }
+#block-6 { top: 30%; left: 60%; }
+
+#block-1, #block-2, #block-3, #block-4, #block-5, #block-6 {
+  @include laptop {
+    top: 2%;
+    left: 0%;
+  }
+
+  &::after {
+    position: absolute;
+
+    @include laptop {
+      display: none;
+    }
+  }
+}
+
+#block-1::after {
+  top: 100%;
+  left: 30%;
+  transform: translateY(-1%);
+  content: url(/Icons/DottedLine-1.svg);
+}
+
+#block-2::after {
+  top: 100%;
+  left: 78%;
+  transform: translateY(0%);
+  content: url(/Icons/DottedLine-2.svg);
+}
+
+#block-3::after {
+  top: -92%;
+  left: 15%;
+  transform: translateY(-50%);
+  content: url(/Icons/DottedLine-3.svg);
+}
+
+#block-4::after {
+  top: -10%;
+  left: 58%;
+  transform: translateY(-50%);
+  content: url(/Icons/DottedLine-4.svg);
+}
+
+#block-5::after {
+  top: 100%;
+  left: 20%;
+  transform: translateY(-10%);
+  content: url(/Icons/DottedLine-5.svg);
+}
+
+.arrows {
+  display: none;
+
+  @include laptop {
+    display: flex;
+    justify-content: center;
+    padding-top: rem(20);
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: var(--color-block);
+  font-size: rem(14);
+  cursor: pointer;
+
+  &:not(:first-child) {
+    margin-left: rem(70);
+  }
+}

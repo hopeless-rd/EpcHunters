@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.logo {
+    user-select: none;
+    cursor: default;
+    font-family: var(--font-family-logo);
+    
+    @include hover {
+        color: var(--color-light);
+    }
+
+    @include laptop {
+        font-family: var(--font-family-second);
+    }
+}

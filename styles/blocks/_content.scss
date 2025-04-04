@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.content {
+  &-h1 {
+    text-align: center;
+    padding: rem(30) 0 rem(48);
+
+    @include mobile {
+      padding-bottom: rem(15);
+    }
+  }
+
+  &-blocks {
+    position: relative;
+    height: 80%;
+  }
+}

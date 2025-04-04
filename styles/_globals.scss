@@ -1,0 +1,66 @@
+@use 'helpers' as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  letter-spacing: -0.03em;
+  color: var(--color-grey);
+  background-color: var(--color-green);
+  cursor: default;
+  margin: 0 auto;
+
+  @include mobile {
+    margin: 0;
+  }
+}
+
+.main-section {
+  max-width: rem(1280);
+  background: url(../images/background.jpg) no-repeat;
+  margin: 0 auto;
+  height: rem(800);
+  width: 100%;
+  min-width: rem(320);
+
+}
+
+
+h1, .h1 {
+  color: var(--color-light);
+  font-family: var(--font-family-second);
+  font-weight: 700;
+  @include fluid-text(90, 35);
+  line-height: 1.2;
+}
+
+p {
+  --paragraphMarginBottom: #{rem(24)};
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  @include hover {
+    color: var(--color-hover);
+  }
+}
+
+:focus-visible {
+  outline: rem(1) solid var(--color-light);
+  transition-duration: 0s !important;
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: '';
+    }
+  }
+}
