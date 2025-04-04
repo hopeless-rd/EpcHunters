@@ -18,7 +18,7 @@ class Blocks {
     }
   
     isLaptopView() {
-      return window.matchMedia('(min-width: 1024px)').matches;
+      return window.matchMedia('(min-width: 0)').matches;
     }
   
     showBlock(index) {

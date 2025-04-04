@@ -268,7 +268,7 @@ svg * {
 }
 
 body {
-  display: flex;
+  display: none;
   flex-direction: column;
   font-family: var(--font-family-base);
   letter-spacing: -0.03em;
