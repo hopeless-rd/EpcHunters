@@ -24,7 +24,7 @@
 
   &::before {
     position: absolute;
-    content: url(./Icons/Vector.svg);
+    content: url(../Icons/Vector.svg);
     top: rem(-25);
     right: rem(-30);
   }
@@ -91,35 +91,35 @@
   top: 100%;
   left: 30%;
   transform: translateY(-1%);
-  content: url(./Icons/DottedLine-1.svg);
+  content: url(../Icons/DottedLine-1.svg);
 }
 
 #block-2::after {
   top: 100%;
   left: 78%;
   transform: translateY(0%);
-  content: url(./Icons/DottedLine-2.svg);
+  content: url(../Icons/DottedLine-2.svg);
 }
 
 #block-3::after {
   top: -92%;
   left: 15%;
   transform: translateY(-50%);
-  content: url(./Icons/DottedLine-3.svg);
+  content: url(../Icons/DottedLine-3.svg);
 }
 
 #block-4::after {
   top: -10%;
   left: 58%;
   transform: translateY(-50%);
-  content: url(./Icons/DottedLine-4.svg);
+  content: url(../Icons/DottedLine-4.svg);
 }
 
 #block-5::after {
   top: 100%;
   left: 20%;
   transform: translateY(-10%);
-  content: url(./Icons/DottedLine-5.svg);
+  content: url(../Icons/DottedLine-5.svg);
 }
 
 .arrows {
