@@ -468,7 +468,7 @@ button[aria-label]::before {
 }
 .block::before {
   position: absolute;
-  content: url(/Icons/Vector.png);
+  content: url(../Icons/Vector.png);
   top: -1.5625rem;
   right: -1.875rem;
 }
