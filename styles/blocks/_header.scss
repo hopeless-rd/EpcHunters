@@ -74,7 +74,6 @@
       font-size: rem(20);
       letter-spacing: rem(1);
       border-bottom: rem(2) solid var(--color-grey);
-
       @include laptop {
         display: flex;
         margin: 0 auto;
